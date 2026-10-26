@@ -1,21 +1,116 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online mediCare - Appointment Scheduling & Free AI Telehealth</title>
-    <meta name="description" content="Online mediCare provides 24/7 free AI-guided medical consultations, evidence-based health triage with rightful public resources, and seamless online appointment scheduling with telehealth doctors." />
-    <meta property="og:title" content="Online mediCare - Appointment Scheduling & Free AI Telehealth" />
-    <meta property="og:description" content="Online mediCare provides 24/7 free AI-guided medical consultations, evidence-based health triage with rightful public resources, and seamless online appointment scheduling with telehealth doctors." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-teal-500 selection:text-white">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10251d">
+  <meta name="description" content="A Malawi-focused insurance claims review and fraud detection prototype.">
+  <title>Mwayi | Malawi Claims Intelligence</title>
+  <link rel="stylesheet" href="insurance.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Mwayi home">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span>Mwayi<span class="brand-light">Claims</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home" data-page-link="home">Overview</a>
+      <a class="nav-link" href="#claims" data-page-link="claims">Claims queue <span class="nav-count">4</span></a>
+      <a class="nav-link" href="#submit" data-page-link="submit">Submit a claim</a>
+    </nav>
+    <div class="header-actions">
+      <span class="location"><span class="location-dot"></span> Malawi</span>
+      <button class="sign-in-button" type="button" data-sign-in>Sign in <span aria-hidden="true">↗</span></button>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
 
+  <main>
+    <section class="page active" id="home" data-page="home">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> TRUST, PROTECTED</span>
+          <h1>Every claim.<br><span>Closer to fair.</span></h1>
+          <p class="hero-description">A clearer way to review insurance claims in Malawi. Spot unusual patterns, support your decisions with evidence, and keep genuine customers moving.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#claims">Explore claims <span aria-hidden="true">→</span></a>
+            <button class="button button-quiet" type="button" data-sign-in>Sign in to your account</button>
+          </div>
+          <div class="hero-note"><span class="check-mark">✓</span> Built for Malawi’s insurance community</div>
+        </div>
+        <div class="hero-art" aria-label="The Malawi flag waving">
+          <div class="flag-caption"><span class="flag-caption-dot"></span> ONE NATION, ONE COMMUNITY</div>
+          <div class="flag-stage">
+            <div class="flag-pole" aria-hidden="true"></div>
+            <div class="malawi-flag" role="img" aria-label="Flag of Malawi: black, red and green horizontal stripes with a rising sun">
+              <div class="flag-stripe flag-black"><span class="sun" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+              <div class="flag-stripe flag-red"></div>
+              <div class="flag-stripe flag-green"></div>
+            </div>
+          </div>
+          <div class="flag-footnote"><span>13° 15′ S</span><span>LILONGWE, MALAWI</span></div>
+          <div class="hero-stamp" aria-hidden="true"><span>MW</span><span class="stamp-small">MALAWI<br>FIRST</span></div>
+        </div>
+      </div>
+      <div class="stats-strip">
+        <div class="stat-item"><span class="stat-label">CLAIMS REVIEWED</span><strong>1,284</strong><span class="stat-change">↑ 12% this month</span></div>
+        <div class="stat-item"><span class="stat-label">NEEDS ATTENTION</span><strong>08</strong><span class="stat-neutral">Across all branches</span></div>
+        <div class="stat-item"><span class="stat-label">AVERAGE REVIEW</span><strong>2.4 <small>days</small></strong><span class="stat-change">↓ 18% faster</span></div>
+        <div class="stat-note"><span class="note-icon">✳</span><span><strong>Fairness comes first.</strong><br>Signals guide a human review—they never decide a claim on their own.</span></div>
+      </div>
+      <div class="section-heading">
+        <div><span class="eyebrow">A CLEARER WAY FORWARD</span><h2>Made for the work that matters.</h2></div>
+        <a class="text-link" href="#claims">Go to claims queue <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-icon icon-green">⌕</span><span class="feature-number">01 / REVIEW</span><h3>See the full picture</h3><p>Bring claim details, documents and review notes together in one straightforward view.</p></article>
+        <article class="feature-card"><span class="feature-icon icon-red">⌁</span><span class="feature-number">02 / IDENTIFY</span><h3>Notice what stands out</h3><p>Surface patterns worth a closer look, with clear reasons reviewers can understand.</p></article>
+        <article class="feature-card"><span class="feature-icon icon-gold">↗</span><span class="feature-number">03 / ACT</span><h3>Keep decisions human</h3><p>Give experienced reviewers the context to make consistent, evidence-led decisions.</p></article>
+      </div>
+    </section>
+
+    <section class="page interior-page" id="claims" data-page="claims">
+      <div class="page-heading"><div><span class="eyebrow">CLAIMS WORKSPACE / 01</span><h1>Claims queue<span class="heading-period">.</span></h1><p>Review incoming claims and prioritize the cases that need a closer look.</p></div><a class="button button-primary" href="#submit">＋ New claim</a></div>
+      <div class="queue-summary"><div><span class="stat-label">OPEN CLAIMS</span><strong>24</strong></div><div><span class="stat-label">FLAGGED FOR REVIEW</span><strong class="text-red">08</strong></div><div><span class="stat-label">READY TO REVIEW</span><strong>16</strong></div><div class="queue-search"><label for="claim-search">⌕</label><input id="claim-search" type="search" placeholder="Search claim or policy number" aria-label="Search claims"></div></div>
+      <div class="table-wrap"><table><thead><tr><th>CLAIMANT / CLAIM ID</th><th>TYPE</th><th>AMOUNT</th><th>SUBMITTED</th><th>REVIEW SIGNAL</th><th>STATUS</th></tr></thead><tbody id="claims-table">
+        <tr data-search="grace banda mw-24081 motor"><td><strong>Grace Banda</strong><small>MW-24081 · Lilongwe</small></td><td>Motor</td><td>MK 2,450,000</td><td>24 Oct 2026</td><td><span class="signal signal-high">● Review suggested</span></td><td><span class="status status-review">In review</span></td></tr>
+        <tr data-search="peter chirwa mw-24079 health"><td><strong>Peter Chirwa</strong><small>MW-24079 · Blantyre</small></td><td>Health</td><td>MK 385,000</td><td>23 Oct 2026</td><td><span class="signal signal-low">● No unusual signals</span></td><td><span class="status status-new">New</span></td></tr>
+        <tr data-search="mercy phiri mw-24076 property"><td><strong>Mercy Phiri</strong><small>MW-24076 · Mzuzu</small></td><td>Property</td><td>MK 5,100,000</td><td>22 Oct 2026</td><td><span class="signal signal-medium">● Verify details</span></td><td><span class="status status-review">In review</span></td></tr>
+        <tr data-search="john kalua mw-24073 motor"><td><strong>John Kalua</strong><small>MW-24073 · Zomba</small></td><td>Motor</td><td>MK 1,275,000</td><td>21 Oct 2026</td><td><span class="signal signal-low">● No unusual signals</span></td><td><span class="status status-new">New</span></td></tr>
+      </tbody></table></div>
+      <p class="table-footnote">Illustrative demo records only. Review signals are prompts for human assessment, not findings of fraud.</p>
+    </section>
+
+    <section class="page interior-page" id="submit" data-page="submit">
+      <div class="page-heading"><div><span class="eyebrow">CLAIMS WORKSPACE / 02</span><h1>Submit a claim<span class="heading-period">.</span></h1><p>Record the basics to start a fair, well-documented review.</p></div></div>
+      <form class="claim-form" id="claim-form">
+        <div class="form-section-title"><span class="form-step">01</span><div><h2>Claimant details</h2><p>Tell us who is making the claim.</p></div></div>
+        <div class="form-grid">
+          <label>Full name <input name="name" autocomplete="name" placeholder="e.g. Thoko Banda" required></label>
+          <label>Policy number <input name="policy" placeholder="e.g. MW-POL-00814" required></label>
+          <label>Phone number <input name="phone" type="tel" autocomplete="tel" placeholder="+265 99 123 4567" required></label>
+          <label>District <select name="district" required><option value="">Select a district</option><option>Lilongwe</option><option>Blantyre</option><option>Mzuzu</option><option>Zomba</option><option>Other</option></select></label>
+        </div>
+        <div class="form-section-title"><span class="form-step">02</span><div><h2>Claim information</h2><p>Share the incident and requested amount.</p></div></div>
+        <div class="form-grid">
+          <label>Claim type <select name="type" required><option value="">Select claim type</option><option>Motor</option><option>Health</option><option>Property</option><option>Life</option><option>Other</option></select></label>
+          <label>Amount (MWK) <input name="amount" type="number" min="1" step="1" placeholder="e.g. 250000" required></label>
+          <label class="form-full">Incident description <textarea name="description" rows="4" placeholder="Describe what happened and when..." required></textarea></label>
+        </div>
+        <div class="form-actions"><p><span class="check-mark">✓</span> A reviewer will assess all information before any decision.</p><button class="button button-primary" type="submit">Save claim <span aria-hidden="true">→</span></button></div>
+        <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">M</span><span>Mwayi<span class="brand-light">Claims</span></span></a><span>Made with care for Malawi. <span class="footer-sun">✳</span></span><span>Demo experience · Decisions remain human-led</span></footer>
+
+  <dialog class="sign-in-dialog" id="sign-in-dialog" aria-labelledby="sign-in-title">
+    <form method="dialog" class="dialog-close-form"><button class="dialog-close" aria-label="Close sign-in dialog">×</button></form>
+    <span class="eyebrow">WELCOME BACK</span><h2 id="sign-in-title">Sign in to Mwayi.</h2><p>This prototype does not connect to an account service yet.</p>
+    <form id="sign-in-form"><label>Email address<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label><label>Password<input type="password" name="password" autocomplete="current-password" placeholder="Enter your password" required></label><button class="button button-primary dialog-submit" type="submit">Continue <span aria-hidden="true">→</span></button><p class="form-feedback" id="sign-in-feedback" role="status" aria-live="polite"></p></form>
+  </dialog>
+  <script src="insurance.js"></script>
+</body>
+</html>
